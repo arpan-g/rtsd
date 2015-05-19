@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;rtsd/newModel.csp&apos; to &apos;newModel_deadlock.csp&apos;" description="Rename resource &apos;newModel.csp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="newModel.csp" name="newModel_deadlock.csp" stamp="1431600959254" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;rtsd/newModel.cspm&apos; to &apos;newModel_deadlock.cspm&apos;" description="Rename resource &apos;newModel.cspm&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="newModel.cspm" name="newModel_deadlock.cspm" stamp="1431600974653" updateReferences="true"/>
+</session>
