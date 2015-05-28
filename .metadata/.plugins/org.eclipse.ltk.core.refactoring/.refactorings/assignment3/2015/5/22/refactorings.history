@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;assignment3/topLevel.cspm&apos; to &apos;assignment3.cspm&apos;" description="Rename resource &apos;topLevel.cspm&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="topLevel.cspm" name="assignment3.cspm" stamp="1432827390123" updateReferences="true"/>
+</session>

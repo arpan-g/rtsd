@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocumentRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns="http:///nl/utwente/ram/xxsim/xml/model/xml.ecore">
+<modelConfiguration>
+	<schemeVersion>
+		<major>1</major>
+		<minor>0</minor>
+		<revision>0</revision>
+		<patch>0</patch>
+	</schemeVersion>
+	<general>
+		<name>Controller</name>
+		<description>&lt;Description&gt;&lt;Version&gt;4.0&lt;/Version&gt;&lt;IsMainModel&gt;1&lt;/IsMainModel&gt;&lt;KeepParameterValues&gt;False&lt;/KeepParameterValues&gt;
+   &lt;LibraryPath&gt;Signal\Control\PID Control\Continuous\Controller-P.emx&lt;/LibraryPath&gt;
+  &lt;TimeStamp&gt;2007-9-27 13:45:17&lt;/TimeStamp&gt;
+&lt;/Description&gt;</description>
+		<creationDate>2015-05-27T23:58:58.0Z</creationDate>
+		<modelDir></modelDir>
+		<originalModel>C:\Program Files (x86)\20-sim 4.5\Models\rtsd.emx</originalModel>
+		<additional>Universiteit Twente , 20-sim 4.5 Campus Licentie</additional>
+		<creator>
+			<name>20-sim</name>
+			<version>
+				<major>4</major>
+				<minor>5</minor>
+				<revision>1</revision>
+				<patch>5561</patch>
+			</version>
+		</creator>
+	</general>
+	<run>
+		<startTime>0.0</startTime>
+		<finishTime>10.0</finishTime>
+		<stepSize>1.0</stepSize>
+	</run>
+	<modelVariables count="5">
+		<modelVariable id="1">
+			<name>SP</name>
+			<kind>input</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<description></description>
+			<storage>
+				<name>V</name>
+				<index>0</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+		<modelVariable id="2">
+			<name>MV</name>
+			<kind>input</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<description></description>
+			<storage>
+				<name>V</name>
+				<index>1</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+		<modelVariable id="3">
+			<name>output</name>
+			<kind>output</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<description></description>
+			<storage>
+				<name>V</name>
+				<index>2</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+		<modelVariable id="4">
+			<name>K</name>
+			<kind>parameter</kind>
+			<type>real</type>
+			<value>1.0</value>
+			<description>Proportional gain</description>
+			<physical>
+				<unit>
+					<name></name>
+				</unit>
+				<quantity>magnitude</quantity>
+			</physical>
+			<storage>
+				<name>P</name>
+				<index>0</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+		<modelVariable id="5">
+			<name>error</name>
+			<kind>variable</kind>
+			<type>real</type>
+			<value>0.0</value>
+			<storage>
+				<name>V</name>
+				<index>3</index>
+			</storage>
+			<iconIndex>1</iconIndex>
+		</modelVariable>
+	</modelVariables>
+	<storage>
+		<name>ivc_rtsd</name>
+		<size>40</size>
+		<tables>
+			<table>
+				<name>V</name>
+				<size>32</size>
+				<kind>real</kind>
+				<kindSize>8</kindSize>
+				<count>4</count>
+			</table>
+			<table>
+				<name>P</name>
+				<size>8</size>
+				<kind>real</kind>
+				<kindSize>8</kindSize>
+				<count>1</count>
+			</table>
+		</tables>
+	</storage>
+	<icons>
+		<icon>89504e470d0a1a0a0000000d49484452000000100000001008060000001ff3ff6100000006624b474400ff00ff00ffa0bda793000000097048597300000ec400000ec401952b0e1b0000017d49444154388d9593cd4a23511085bfbab97d43684916411109c49508ee7521f8903e8c7b373e405e2090b520d88974df9faa59f498d08c93c9d4ea728bf3c1399c9218a36d361b72ce9819a78e88e0bdc7afd76b524ad4754d4ae9644055556cb75b7c2985baaeb9bc9c136387739092500a88fc1d10424055f122422989b737e3eb0b3e3f1df7f791e95429e50801c839e37b3f46d709ab554508e0dcc94e7a00088b45c1fbcccd4da6ae9518e50f0bce817346ce32049402cb6566b188c4283f8a4560b71372764ca77a807e3f5212da5650fd39bcc944797d9df0fc3ce3e3c3e1bd0d01ff1a332167e1e9a91d04ecfb25786fa81a22508a60d6ff7f4fdb0a8f8f2d1717999c65bff300a391f1fe3e22a511bb9d309f2baa50d786feb6ab0ae7e743f11e3099182f2f6356ab8aebebc2d555e6e161d84a1106e90f005d27dcdd25cece0acb6546156633a5eb8e17690f48a907dcde464a39783e56e53dc0cc08a142648cea41341e1f178610a8aaaabf85a66930b3ffbec6a669f8051fdabda7ca2da7240000000049454e44ae426082</icon>
+	</icons>
+</modelConfiguration>
+</DocumentRoot>
+

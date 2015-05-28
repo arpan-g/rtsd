@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;Controller, LinearSystem, Step&apos; to &apos;q3&apos;" description="Move 3 resources to &apos;q3&apos;" destination="/q3" element1="/newModel_deadlock/Controller" element2="/newModel_deadlock/LinearSystem" element3="/newModel_deadlock/Step" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="3" stamp="1432763368192" updateReferences="true"/>
+</session>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csp:CSPDiagram file-version="3" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cpc="http:///nl/utwente/ce/terra/cpc/model/cpc.ecore" xmlns:csp="http:///nl/utwente/ce/terra/csp/model/csp.ecore">
+  <objects xsi:type="csp:CSPModel" name="seqCon" constraints="129,95,50,50" compositionalRelations="//@compositionalRelations.1">
+    <properties xsi:type="csp:CSPRecursionProperty"/>
+    <objects xsi:type="csp:CSPPort" direction="OUTGOING" link="//@links.0" unitType="//@properties.0/@units.0" name="stepOut" constraints="40,32,10,10">
+      <properties xsi:type="cpc:CPCInterfaceObjectProperty" interfacedObject="//@objects.0/@submodel/@objects.0"/>
+    </objects>
+    <submodel xsi:type="csp:CSPDiagram">
+      <objects xsi:type="csp:CSPPort" link="//@objects.0/@submodel/@links.0" name="stepOut" constraints="294,82,10,10"/>
+      <objects xsi:type="csp:CSPWriter" name="writter" constraints="156,84,40,40" link="//@objects.0/@submodel/@links.0" variable="//@objects.0/@submodel/@properties.0/@variables.0"/>
+      <properties xsi:type="csp:CSPVariablesProperty">
+        <variables name="pCode" type="//@properties.0/@units.0"/>
+      </properties>
+      <links xsi:type="csp:CSPChannel" ports="//@objects.0/@submodel/@objects.1 //@objects.0/@submodel/@objects.0"/>
+    </submodel>
+  </objects>
+  <objects xsi:type="csp:CSPModel" name="loopcon" constraints="330,87,50,50" compositionalRelations="//@compositionalRelations.0 //@compositionalRelations.1">
+    <properties xsi:type="csp:CSPRecursionProperty"/>
+    <objects xsi:type="csp:CSPPort" link="//@links.2" unitType="//@properties.0/@units.0" name="linearSystemInputController" constraints="0,33,10,10">
+      <properties xsi:type="cpc:CPCInterfaceObjectProperty" interfacedObject="//@objects.1/@submodel/@objects.0"/>
+    </objects>
+    <objects xsi:type="csp:CSPPort" link="//@links.0" unitType="//@properties.0/@units.0" name="stepControllerInput" constraints="0,0,10,10">
+      <properties xsi:type="cpc:CPCInterfaceObjectProperty" interfacedObject="//@objects.1/@submodel/@objects.1"/>
+    </objects>
+    <objects xsi:type="csp:CSPPort" direction="OUTGOING" link="//@links.1" unitType="//@properties.0/@units.0" name="controller" constraints="40,24,10,10">
+      <properties xsi:type="cpc:CPCInterfaceObjectProperty" interfacedObject="//@objects.1/@submodel/@objects.2"/>
+    </objects>
+    <submodel xsi:type="csp:CSPDiagram">
+      <objects xsi:type="csp:CSPPort" direction="OUTGOING" name="linearSystemInputController" constraints="50,50,10,10"/>
+      <objects xsi:type="csp:CSPPort" direction="OUTGOING" name="stepControllerInput" constraints="50,50,10,10"/>
+      <objects xsi:type="csp:CSPPort" name="controller" constraints="50,50,10,10"/>
+    </submodel>
+  </objects>
+  <objects xsi:type="csp:CSPModel" name="linearsystem" constraints="522,95,50,50" compositionalRelations="//@compositionalRelations.0">
+    <properties xsi:type="csp:CSPRecursionProperty"/>
+    <objects xsi:type="csp:CSPPort" link="//@links.1" name="linearSystemInput" constraints="0,22,10,10">
+      <properties xsi:type="cpc:CPCInterfaceObjectProperty" interfacedObject="//@objects.2/@submodel/@objects.0"/>
+    </objects>
+    <objects xsi:type="csp:CSPPort" direction="OUTGOING" link="//@links.2" unitType="//@properties.0/@units.0" name="linearSystemOutput" constraints="40,25,10,10">
+      <properties xsi:type="cpc:CPCInterfaceObjectProperty" interfacedObject="//@objects.2/@submodel/@objects.1"/>
+    </objects>
+    <submodel xsi:type="csp:CSPDiagram">
+      <objects xsi:type="csp:CSPPort" direction="OUTGOING" name="linearSystemInput" constraints="50,50,10,10"/>
+      <objects xsi:type="csp:CSPPort" name="linearSystemOutput" constraints="50,50,10,10"/>
+    </submodel>
+  </objects>
+  <objects xsi:type="csp:CSPCompositionalGroup" name="PARALLEL" constraints="104,62,493,108" relations="//@compositionalRelations.0 //@compositionalRelations.1"/>
+  <properties xsi:type="cpc:CPCUnitsProperty">
+    <units name="data" unit="int"/>
+  </properties>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.0/stepOut //@objects.1/stepControllerInput"/>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.1/controller //@objects.2/linearSystemInput"/>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.2/linearSystemOutput //@objects.1/linearSystemInputController">
+    <bendpoints>574,206</bendpoints>
+    <bendpoints>495,221</bendpoints>
+    <bendpoints>337,215</bendpoints>
+  </links>
+  <compositionalRelations compositeObjects="//@objects.1 //@objects.2" compositionalGroup="//@objects.3"/>
+  <compositionalRelations compositeObjects="//@objects.0 //@objects.1" compositionalGroup="//@objects.3"/>
+</csp:CSPDiagram>

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Q3/model/plant.cspm&apos; to &apos;model.cspm&apos;" description="Rename resource &apos;plant.cspm&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="model/plant.cspm" name="model.cspm" stamp="1432752054612" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Q3/model/model.cspm&apos; to &apos;Q3.cspm&apos;" description="Rename resource &apos;model.cspm&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="model/model.cspm" name="Q3.cspm" stamp="1432752093042" updateReferences="true"/>
+</session>

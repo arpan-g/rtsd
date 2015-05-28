@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;q4/q4WithoutDeadlock.cspm&apos; to &apos;q4WithoutDeadlock_min.cspm&apos;" description="Rename resource &apos;q4WithoutDeadlock.cspm&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="q4WithoutDeadlock.cspm" name="q4WithoutDeadlock_min.cspm" stamp="1432809622717" updateReferences="true"/>
+</session>

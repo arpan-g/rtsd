@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<csp:CSPDiagram file-version="3" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cpc="http:///nl/utwente/ce/terra/cpc/model/cpc.ecore" xmlns:csp="http:///nl/utwente/ce/terra/csp/model/csp.ecore">
+  <objects xsi:type="csp:CSPModel" name="step" constraints="146,126,50,50">
+    <objects xsi:type="csp:CSPPort" direction="OUTGOING" link="//@links.0" unitType="//@properties.0/@units.0" name="stepOutput" constraints="40,22,10,10">
+      <properties xsi:type="cpc:CPCInterfaceObjectProperty" interfacedObject="//@objects.0/@submodel/@objects.0"/>
+    </objects>
+    <submodel xsi:type="csp:CSPDiagram">
+      <objects xsi:type="csp:CSPPort" name="stepOutput" constraints="50,50,10,10"/>
+    </submodel>
+  </objects>
+  <objects xsi:type="csp:CSPModel" name="controller" constraints="313,123,101,50">
+    <objects xsi:type="csp:CSPPort" link="//@links.2" unitType="//@properties.0/@units.0" name="controller_linear_in" constraints="0,40,10,10">
+      <properties xsi:type="cpc:CPCInterfaceObjectProperty" interfacedObject="//@objects.1/@submodel/@objects.0"/>
+    </objects>
+    <objects xsi:type="csp:CSPPort" link="//@links.0" unitType="//@properties.0/@units.0" name="controller_s_in" constraints="0,0,10,10">
+      <properties xsi:type="cpc:CPCInterfaceObjectProperty" interfacedObject="//@objects.1/@submodel/@objects.1"/>
+    </objects>
+    <objects xsi:type="csp:CSPPort" direction="OUTGOING" link="//@links.1" unitType="//@properties.0/@units.0" name="controller_out" constraints="91,22,10,10">
+      <properties xsi:type="cpc:CPCInterfaceObjectProperty" interfacedObject="//@objects.1/@submodel/@objects.2"/>
+    </objects>
+    <submodel xsi:type="csp:CSPDiagram">
+      <objects xsi:type="csp:CSPPort" direction="OUTGOING" name="controller_linear_in" constraints="50,50,10,10"/>
+      <objects xsi:type="csp:CSPPort" direction="OUTGOING" name="controller_s_in" constraints="50,50,10,10"/>
+      <objects xsi:type="csp:CSPPort" name="controller_out" constraints="50,50,10,10"/>
+    </submodel>
+  </objects>
+  <objects xsi:type="csp:CSPModel" name="linearSystem" constraints="509,124,159,50">
+    <objects xsi:type="csp:CSPPort" link="//@links.1" unitType="//@properties.0/@units.0" name="linear_in" constraints="0,21,10,10">
+      <properties xsi:type="cpc:CPCInterfaceObjectProperty" interfacedObject="//@objects.2/@submodel/@objects.0"/>
+    </objects>
+    <objects xsi:type="csp:CSPPort" direction="OUTGOING" link="//@links.2" constraints="149,26,10,10">
+      <properties xsi:type="cpc:CPCInterfaceObjectProperty" interfacedObject="//@objects.2/@submodel/@objects.1"/>
+    </objects>
+    <submodel xsi:type="csp:CSPDiagram">
+      <objects xsi:type="csp:CSPPort" direction="OUTGOING" name="linear_in" constraints="50,50,10,10"/>
+      <objects xsi:type="csp:CSPPort" constraints="50,50,10,10"/>
+    </submodel>
+  </objects>
+  <properties xsi:type="cpc:CPCUnitsProperty">
+    <units name="data" unit="int"/>
+  </properties>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.0/stepOutput //@objects.1/controller_s_in"/>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.1/controller_out //@objects.2/linear_in"/>
+  <links xsi:type="csp:CSPChannel" ports="//@objects.2/% //@objects.1/controller_linear_in">
+    <bendpoints>665,275</bendpoints>
+    <bendpoints>318,277</bendpoints>
+  </links>
+</csp:CSPDiagram>
