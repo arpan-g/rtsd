@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;assignment3.cspm&apos; to &apos;model&apos;" description="Move &apos;assignment3.cspm&apos; to &apos;model&apos;" destination="model" element1="/rtsd/assignment3.cspm" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1432745011183" updateReferences="true"/>
+</session>
